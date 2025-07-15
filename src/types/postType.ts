@@ -1,10 +1,13 @@
 // src/types/postType.ts
 
-import { PortableTextBlock } from "next-sanity";
+import type { PortableTextBlock } from "@portabletext/types";
 
 export interface ImageAsset {
   asset: {
     url: string;
+    metadata?: {
+      lqip?: string;
+    };
   };
   alt?: string;
 }

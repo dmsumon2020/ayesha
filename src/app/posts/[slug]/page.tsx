@@ -23,7 +23,7 @@ export default async function PostPage({
   if (!post) return notFound();
 
   return (
-    <article className="max-w-3xl mx-auto p-8">
+    <article className="p-8">
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
 
       <p className="text-sm text-gray-500 mb-6">
@@ -37,6 +37,8 @@ export default async function PostPage({
           alt={post.title}
           width={800}
           height={500}
+          placeholder="blur"
+          blurDataURL={post.coverImage?.asset.metadata?.lqip}
           className="rounded-lg mb-6"
         />
       )}
